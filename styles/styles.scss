@@ -1,0 +1,51 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: "BebasNeue Pro-regular";
+    src: url(../public/fonts/BebasNeuePro-Regular.ttf) format("truetype"),
+        url(../public/fonts/BebasNeuePro-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: "BebasNeue Pro-light";
+    src: url(../public/fonts/BebasNeuePro-Light.ttf) format("truetype"),
+        url(../public/fonts/BebasNeuePro-Light.woff) format("woff");
+}
+@font-face {
+    font-family: "BebasNeue Pro-thin";
+    src: url(../public/fonts/BebasNeuePro-Thin.ttf) format("truetype"),
+        url(../public/fonts/BebasNeuePro-Thin.woff) format("woff");
+}
+@font-face {
+    font-family: "BebasNeue Pro-bold";
+    src: url(../public/fonts/BebasNeuePro-Bold.ttf) format("truetype"),
+        url(../public/fonts/BebasNeuePro-Bold.woff) format("woff");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "BebasNeue Pro-regular";
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
