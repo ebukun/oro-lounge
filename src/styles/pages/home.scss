@@ -1,0 +1,194 @@
+#home-page {
+    .navbar {
+        background: rgba(35, 31, 32, 0.6);
+        backdrop-filter: blur(14px);
+    }
+
+    .header {
+        height: 100vh;
+    }
+
+    .header-text {
+        font-family: "BebasNeue Pro-bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 96px;
+        line-height: 110px;
+    }
+
+    .sub-text {
+        width: 888px;
+        font-family: "Barlow-thin";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .about-section {
+        .left-section {
+            width: 650px;
+            .heading-text {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 42px;
+                line-height: 48px;
+                width: 615px;
+            }
+
+            & > p {
+                font-family: "Barlow regular";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 28px;
+                color: #231f20;
+            }
+        }
+
+        .right-section {
+            h5 {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 28px;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-family: "Barlow regular";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .menu-section {
+        background: #1d191a;
+        z-index: -10;
+        .first-image-overly {
+            position: absolute;
+            z-index: -10;
+            right: -0px;
+            top: 0;
+        }
+        .second-image-overly {
+            position: absolute;
+            z-index: -10;
+
+            left: 0px;
+            bottom: 0;
+        }
+        .heading-text {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 64px;
+        }
+
+        .menu-details {
+            .menu-card {
+                .card-price {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 22px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    color: #e5cb9f;
+                }
+                .straight-line {
+                    border-bottom: 1px solid #e5cb9f;
+                }
+            }
+        }
+    }
+
+    .cta-section {
+        .heading-text {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 73px;
+        }
+
+        .sub-text {
+            font-size: 20px;
+            line-height: 30px;
+            width: 880px;
+            text-align: center;
+        }
+    }
+
+    .happening-section {
+        .heading-text {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 73px;
+        }
+
+        .details-body {
+            width: 632px;
+            height: 400px;
+            .details {
+                background: rgba(35, 31, 32, 0.75);
+                backdrop-filter: blur(5px);
+                padding: 25px;
+                width: 100%;
+                max-width: 400px;
+
+                p:nth-child(1) {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .footer-section {
+        background: #231f20;
+
+        .socials {
+            h5 {
+                font-size: 20px;
+                line-height: 28px;
+                margin-left: 30px;
+            }
+        }
+
+        .newsletter {
+            h5 {
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            .form {
+                input {
+                    width: 250px;
+
+                    &::placeholder {
+                        font-family: "Barlow regular";
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+
+    .terms {
+        background: #252525 !important;
+    }
+}
