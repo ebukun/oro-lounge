@@ -248,7 +248,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/**SECTION 5 */}
-                <div className="2xl:container mx-auto px-32 happening-section my-40">
+                <div className="3xl:container mx-auto px-32 happening-section my-40">
                     <h3 className="text-center heading-text text-blackish mb-8">HAPPENINGS</h3>
                     <div className="grid grid-cols-3 gap-20">
                         <div className="bg-hook-one bg-no-repeat  relative bg-contain details-body">
@@ -313,22 +313,22 @@ export default function Home() {
                     </div>
                 </div>
                 {/**SECTION 7 */}
-                <div className="container gallery-section my-40">
+                <div className="3xl:container gallery-section my-40">
                     <h3 className="text-center heading-text text-blackish mb-20">GALLERY</h3>
                     <div className="grid grid-rows-7 grid-cols-3 gap-6">
-                        <div className="row-span-3 bg-tangle-one bg-no-repeat bg-cover" >1</div>
-                        <div className="row-span-2 bg-tangle-two bg-no-repeat bg-cover">2</div>
-                        <div className="row-span-3 bg-tangle-two bg-no-repeat bg-cover">3</div>
-                        <div className=" row-start-4 row-end-7 bg-tangle-two bg-no-repeat bg-cover p-12">4</div>
-                        <div className=" row-start-3 row-end-7 bg-tangle-two bg-no-repeat bg-cover p-12">5</div>
-                        <div className=" row-start-4 row-end-7 bg-tangle-one bg-no-repeat bg-cover p-12">6</div>
+                        <div className="row-span-3 bg-tangle-one bg-no-repeat bg-cover" ></div>
+                        <div className="row-span-2 bg-tangle-two bg-no-repeat bg-cover"></div>
+                        <div className="row-span-3 bg-tangle-two bg-no-repeat bg-cover"></div>
+                        <div className=" row-start-4 row-end-7 bg-tangle-two bg-no-repeat bg-cover p-12"></div>
+                        <div className=" row-start-3 row-end-7 bg-tangle-two bg-no-repeat bg-cover p-12"></div>
+                        <div className=" row-start-4 row-end-7 bg-tangle-one bg-no-repeat bg-cover p-12"></div>
                     </div>
                     <div className="cta flex mt-20  justify-center ">
                         <button className="btn btn-primary btn-md text-blackish">VIEW MORE</button>
                     </div>
                 </div>
                 {/**SECTION 8 */}
-                <div className="container testimonial-section mb-10 bg-testimonials bg-no-repeat bg-cover">
+                <div className="3xl:container testimonial-section mb-10 bg-testimonials bg-no-repeat bg-cover">
                     <div className=" flex flex-col justify-center py-28 px-32">
                         <h3 className="text-whitish text-center">TESTIMONIALS</h3>
                         <div className="text-center carousel mt-8">
@@ -346,7 +346,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/**SECTION 9 */}
-                <div className="container contact-section mb-10">
+                <div className="3xl:container contact-section mb-10">
                     <div className="grid grid-cols-2">
                         <div className="address text-center py-28">
                             <p className=" text-sm font-barlow text-center leading-7  text-whitish">
