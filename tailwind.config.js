@@ -47,7 +47,8 @@ module.exports = {
                 testimonials: "url('/assets/images/test.png')",
                 "tangle-two": "url('/assets/images/tangle-two.png')",
                 "tangle-one": "url('/assets/images/tangle-one.png')",
-                "menu-img": "url('/assets/images/menu-img.png')"
+                "menu-img": "url('/assets/images/menu-img.png')",
+                "happening-img": "url('/assets/images/happening.png')",
             })
         }
     },

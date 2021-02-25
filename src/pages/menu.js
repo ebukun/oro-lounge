@@ -12,7 +12,7 @@ const Menu = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="bg-menu-img  bg-no-repeat bg-cover ">
+            <div className="bg-menu-img bg-no-repeat bg-cover ">
                 <Navbar />
                 <div className="flex flex-col justify-center items-center py-10">
                     <h3 className="text-center text-whitish font-bold font-bebasBold text-8xl leading-extra-big my-9">

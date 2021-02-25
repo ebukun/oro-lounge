@@ -11,7 +11,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="inline-block">
-                        <Link href="/">
+                        <Link href="/happening">
                             <a>HAPPENINGS</a>
                         </Link>
                     </li>
