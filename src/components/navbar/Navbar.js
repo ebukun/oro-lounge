@@ -11,27 +11,23 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="inline-block">
-                        <Link href="/menu">
+                        <Link href="/">
                             <a>HAPPENINGS</a>
                         </Link>
                     </li>
                     <li className="inline-block">
-                        <Link href="/menu">
+                        <Link href="/">
                             <a>CATERING</a>
                         </Link>
                     </li>
                     <li className="inline-block">
-                        <Link href="/menu">
+                        <Link href="/">
                             <a>PRIVATE EVENTS</a>
                         </Link>
                     </li>
+
                     <li className="inline-block">
-                        <Link href="/menu">
-                            <a>PRIVATE EVENTS</a>
-                        </Link>
-                    </li>
-                    <li className="inline-block">
-                        <Link href="/menu">
+                        <Link href="/">
                             <a>GALLERY</a>
                         </Link>
                     </li>

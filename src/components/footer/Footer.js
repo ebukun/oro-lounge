@@ -6,7 +6,7 @@ const Footer = () => {
         <footer>
             <div className="footer-section 3xl:container mx-auto px-32">
                 <div className="pt-12 pb-6 px-28">
-                    <p className="font-barlowThin text-center sub-text text-whitish mt-4 mb-4 mx-auto">
+                    <p className="font-barlow text-center sub-text w-4/6 text-whitish mt-4 mx-auto ">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                         consequat duis enim velit mollit. Exercitation veniam consequat met.
                     </p>
@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="terms flex py-8 justify-between mx-auto px-32">
+            <div className="terms flex py-8 justify-between mx-auto px-32 bg-blackish">
                 <p className="text-whitish font-barlow">© 2021 Oro Bar and Lounge</p>
                 <p className="text-whitish font-barlow">TERMS AND CONDITIONS</p>
             </div>

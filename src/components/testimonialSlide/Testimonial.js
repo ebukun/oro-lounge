@@ -8,7 +8,7 @@ const Testimonial = () => {
                         <img src="/assets/images/person.png" alt="" />
                     </div>
                     <h6 className="text-secondary mt-4">Logan MacPherson</h6>
-                    <p className="text-whitish  mt-4 mb-4 mx-auto">
+                    <p className="text-whitish font-barlow  mt-4 mb-4 mx-auto">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                         consequat duis enim velit mollit. Exercitation veniam consequat met. Amet minim mollit non
                         deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit

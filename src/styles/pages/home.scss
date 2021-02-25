@@ -1,9 +1,4 @@
 #home-page {
-    .navbar {
-        background: rgba(35, 31, 32, 0.6);
-        backdrop-filter: blur(14px);
-    }
-
     .header {
         height: 100vh;
     }
@@ -87,38 +82,6 @@
             font-size: 64px;
             line-height: 64px;
         }
-
-        .menu-details {
-            .menu-card {
-                .card-price {
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 22px;
-                    line-height: 25px;
-                    text-transform: uppercase;
-                    color: #e5cb9f;
-                }
-                .straight-line {
-                    border-bottom: 1px solid #e5cb9f;
-                }
-            }
-        }
-    }
-
-    .cta-section {
-        .heading-text {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 64px;
-            line-height: 73px;
-        }
-
-        .sub-text {
-            font-size: 20px;
-            line-height: 30px;
-            width: 880px;
-            text-align: center;
-        }
     }
 
     .happening-section {
@@ -128,68 +91,6 @@
             font-size: 64px;
             line-height: 73px;
         }
-
-        .details-body {
-            width: 632px;
-            height: 400px;
-            .details {
-                background: rgba(35, 31, 32, 0.75);
-                backdrop-filter: blur(5px);
-                padding: 25px;
-                width: 100%;
-                max-width: 400px;
-
-                p:nth-child(1) {
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 20px;
-                }
-
-                p {
-                    font-size: 16px;
-                    line-height: 20px;
-                }
-            }
-        }
-    }
-
-    .footer-section {
-        background: #231f20;
-
-        .socials {
-            h5 {
-                font-size: 20px;
-                line-height: 28px;
-                margin-left: 30px;
-            }
-        }
-
-        .newsletter {
-            h5 {
-                font-size: 20px;
-                line-height: 28px;
-            }
-
-            .form {
-                input {
-                    width: 250px;
-
-                    &::placeholder {
-                        font-family: "Barlow regular";
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 16px;
-                        line-height: 19px;
-                        color: #000000;
-                    }
-                }
-            }
-        }
-    }
-
-    .terms {
-        background: #252525 !important;
     }
 
     .contact-section {
@@ -223,26 +124,6 @@
                         line-height: 32px;
                     }
                 }
-            }
-        }
-    }
-
-    .testimonial-section {
-        h3 {
-            font-weight: bold;
-            font-size: 54px;
-            line-height: 62px;
-        }
-
-        .carousel {
-            h6 {
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 28px;
-            }
-
-            p {
-                width: 630px;
             }
         }
     }

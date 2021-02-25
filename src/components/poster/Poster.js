@@ -1,6 +1,6 @@
 const Poster = ({ smallText, headingText, subText, LinkOne, LinkTwo, bgImageClass }) => {
     return (
-        <div className={`3xl:container cta-section ${bgImageClass}  bg-no-repeat bg-cover mb-12`}>
+        <div className={`3xl:container poster-section ${bgImageClass}  bg-no-repeat bg-cover mb-12`}>
             <div className="flex flex-col p-32">
                 <h6 className="font-barlow text-center leading-7  text-whitish">{smallText}</h6>
                 <h3 className="text-center heading-text text-whitish">{headingText}</h3>

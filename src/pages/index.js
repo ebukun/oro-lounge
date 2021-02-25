@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-
 import Navbar from "@/components/navbar/Navbar";
 import MenuCard from "@/components/menuCard/MenuCard";
 import Poster from "@/components/poster/Poster";
