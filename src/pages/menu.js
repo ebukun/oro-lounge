@@ -29,7 +29,7 @@ const Menu = () => {
                 </div>
             </div>
 
-            <div className="mx-4 my-5">
+            <div className="container mx-4 my-5">
                 <div className="3xl:container py-12 px-32 mb-12 menu-section text-whitish relative bg-brownish">
                     <div className="tab-menu mt-12">
                         <ul className="flex space-x-12 justify-center content-center">

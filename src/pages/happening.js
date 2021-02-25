@@ -33,7 +33,7 @@ const Happening = () => {
                         </p>
                     </div>
                     <div className=" container px-32 mx-auto">
-                        <div className="grid grid-cols-3 gap-20">
+                        <div className="grid grid-cols-3  gap-20">
                             <EventCard
                                 month="First Tuesday of the month"
                                 eventName="Free Drinks Wednesday"

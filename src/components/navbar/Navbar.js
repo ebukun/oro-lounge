@@ -16,7 +16,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="inline-block">
-                        <Link href="/">
+                        <Link href="/catering">
                             <a>CATERING</a>
                         </Link>
                     </li>
