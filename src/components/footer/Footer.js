@@ -6,9 +6,9 @@ const Footer = () => {
         <footer>
             <div className="footer-section 3xl:container mx-auto px-32">
                 <div className="pt-12 pb-6 px-28">
-                    <p className="font-barlow text-center sub-text w-4/6 text-whitish mt-4 mx-auto ">
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                        consequat duis enim velit mollit. Exercitation veniam consequat met.
+                    <p className="font-barlow text-center text-lg leading-7 w-4/6 text-whitish mt-4 mx-auto ">
+                        2875 Brookdale Drive Brooklyn Park, MN 55444 <br/> + (176) 34322384
+                       
                     </p>
                     <div className="grid grid-cols-2 gap-x-96 my-20">
                         <div className="socials">

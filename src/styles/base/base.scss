@@ -53,3 +53,42 @@ li {
     font-size: 16px;
     line-height: 18px;
 }
+
+.wrapper {
+    @apply mx-0;
+    @apply my-0;
+
+    @screen md {
+        @apply mx-4;
+        @apply my-5;
+    }
+}
+
+.header-subtext {
+    @apply text-whitish;
+    @apply font-barlow;
+    @apply text-center;
+    @apply text-xl;
+    @apply leading-7;
+    @apply px-5;
+    @apply -mt-7;
+    @apply w-3/5;
+}
+
+.header-wrapper {
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+    @apply items-center;
+}
+
+.header-headtext {
+    @apply text-center;
+    @apply text-whitish;
+    @apply font-bold;
+    @apply font-bebasBold;
+    @apply text-8xl;
+    @apply leading-extra-big;
+    @apply my-9;
+    @apply uppercase;
+}

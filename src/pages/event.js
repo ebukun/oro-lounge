@@ -1,22 +1,22 @@
 import Navbar from "@/components/navbar/Navbar";
 import Head from "next/head";
 import Footer from "@/components/footer/Footer";
-import EventCard from "@/components/eventCard/EventCard";
+import Gallery from "@/components/gallery/Gallery";
 import Poster from "@/components/poster/Poster";
 
-const Catering = () => {
+const Event = () => {
     return (
-        <div id="catering-page">
+        <div id="event-page">
             <Head>
-                <title>Catering | Oro lounge</title>
+                <title>Private Event | Oro lounge</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="bg-catering-img bg-no-repeat bg-cover ">
+            <div className="bg-event bg-no-repeat bg-cover ">
                 <Navbar />
                 <div className="header-wrapper py-10">
                     <h3 className="header-headtext">
-                        CATERING
+                    PRIVATE EVENTS
                     </h3>
                     <p className="header-subtext">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
@@ -24,7 +24,7 @@ const Catering = () => {
                     </p>
 
                     <div className="cta space-x-7 mt-12">
-                        <button className="btn btn-primary btn-md uppercase">GET CATERING</button>
+                        <button className="btn btn-primary btn-md uppercase">BOOK AN EVENT</button>
                     </div>
                 </div>
             </div>
@@ -44,33 +44,20 @@ const Catering = () => {
                     </p>
                 </div>
 
-                <div className="container px-32 mx-auto my-16">
-                    <div className="grid grid-cols-6 gap-7 grid-rows-2 ">
-                        <div className="col-span-6 ">
-                            <div className="bg-hook-three bg-no-repeat bg-cover h-96 bg-center"></div>
-                        </div>
-                        <div class="col-span-3 ">
-                            <div className="bg-hook-three bg-no-repeat bg-cover h-96"></div>
-                        </div>
-                        <div class="col-span-3 ">
-                            <div className="bg-hook-three bg-no-repeat bg-cover h-96"></div>
-                        </div>
-                    </div>
-                </div>
+                <Gallery/>
 
                 <Poster
-                    smallText="FOR YOUR SPECIAL DAY"
-                    headingText="EXCEPTIONAL CATERING SERVICES"
-                    subText="        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-                    duis enim velit mollit. Exercitation veniam consequat met."
-                    LinkTwo="GET CATERING"
-                    bgImageClass="bg-cta-section"
+                    boxClasses="mt-10"
+                    smallText="MAKE USE OF OUR SPACE"
+                    headingText="BOOK AN EVENT"
+                    subText="For all inquiries, please fill out the form below and we’ll be in touch soon."
+                    LinkTwo="BOOK AN EVENT"
+                    bgImageClass="bg-booking-section"
                 />
-
                 <Footer />
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Catering;
+export default Event

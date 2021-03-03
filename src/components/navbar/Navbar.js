@@ -21,7 +21,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="inline-block">
-                        <Link href="/">
+                        <Link href="/event">
                             <a>PRIVATE EVENTS</a>
                         </Link>
                     </li>
@@ -34,7 +34,11 @@ const Navbar = () => {
                 </ul>
             </nav>
             <div className="logo flex-grow-0 mr-24">
-                <img src="/assets/images/Logo.png" alt="oro_logo" />
+                <Link href="/">
+                <a>
+                 <img src="/assets/images/Logo.png" alt="oro_logo" />
+                </a>
+                </Link>
             </div>
             <div className="cta space-x-5">
                 <button className="btn btn-secondary btn-sm">BOOK AN EVENT</button>

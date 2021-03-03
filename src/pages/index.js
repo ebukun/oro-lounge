@@ -5,8 +5,12 @@ import Poster from "@/components/poster/Poster";
 import EventCard from "@/components/eventCard/EventCard";
 import Testimonial from "@/components/testimonialSlide/Testimonial";
 import Footer from '@/components/footer/Footer';
+import Gallery from "@/components/gallery/Gallery";
+import { useRouter } from 'next/router'
 
 export default function Home() {
+    const router = useRouter()
+
     return (
         <div className="" id="home-page">
             <Head>
@@ -33,7 +37,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="mx-4">
+            <div className="wrapper">
                 {/**SECTION 2 */}
                 <div className="2xl:container mx-auto px-32 about-section mb-24">
                     <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:gap-x-64 ">
@@ -109,7 +113,7 @@ export default function Home() {
                         </div>
 
                         <div className="cta space-x-7 mt-24 flex justify-center ">
-                            <button className="btn btn-secondary btn-md ">VIEW FULL MENU</button>
+                            <button className="btn btn-secondary btn-md " onClick={()=> router.push('/menu')}>VIEW FULL MENU</button>
                             <button className="btn btn-primary btn-md text-blackish">ORDER ONLINE</button>
                         </div>
                     </div>
@@ -126,6 +130,7 @@ export default function Home() {
                     LinkOne="VIEW MORE"
                     LinkTwo="GET CATERING"
                     bgImageClass="bg-cta-section"
+                    LinkOneRoute="/catering"
                 />
                 {/**SECTION 5 */}
                 <div className="3xl:container mx-auto px-32 happening-section my-40">
@@ -151,7 +156,7 @@ export default function Home() {
                         />
                     </div>
                     <div className="cta flex mt-9 justify-center ">
-                        <button className="btn btn-primary btn-md text-blackish">VIEW MORE</button>
+                        <button className="btn btn-primary btn-md text-blackish" onClick={()=> router.push("/happening")}>VIEW MORE</button>
                     </div>
                 </div>
                 {/**SECTION 6 */}
@@ -163,19 +168,13 @@ export default function Home() {
                     LinkOne="VIEW MORE"
                     LinkTwo="MAKE A RESERVATION"
                     bgImageClass="bg-booking-section"
+                    LinkOneRoute="/event"
                 />
 
                 {/**SECTION 7 */}
                 <div className="3xl:container gallery-section my-40">
                     <h3 className="text-center heading-text text-blackish mb-20">GALLERY</h3>
-                    <div className="grid grid-rows-7 grid-cols-3 gap-6">
-                        <div className="row-span-3 bg-tangle-one bg-no-repeat bg-cover"></div>
-                        <div className="row-span-2 bg-tangle-two bg-no-repeat bg-cover"></div>
-                        <div className="row-span-3 bg-tangle-two bg-no-repeat bg-cover"></div>
-                        <div className=" row-start-4 row-end-7 bg-tangle-two bg-no-repeat bg-cover p-12"></div>
-                        <div className=" row-start-3 row-end-7 bg-tangle-two bg-no-repeat bg-cover p-12"></div>
-                        <div className=" row-start-4 row-end-7 bg-tangle-one bg-no-repeat bg-cover p-12"></div>
-                    </div>
+                    <Gallery/>
                     <div className="cta flex mt-20  justify-center ">
                         <button className="btn btn-primary btn-md text-blackish">VIEW MORE</button>
                     </div>
@@ -192,8 +191,8 @@ export default function Home() {
                             <h3 className="text-secondary">CONTACT US</h3>
 
                             <div className="address_details my-12 text-whitish font-barlow">
-                                <p>74 5th Avenue at St. Marks Place Brooklyn, NY 11217</p>
-                                <p>(347) 555-1234, (347) 555-1234 </p>
+                                <p>2875 Brookdale Drive Brooklyn Park, MN 55444</p>
+                                <p>+ (176) 34322384</p>
                                 <p>bookings@orolounge.com, bookings@orolounge.com </p>
                             </div>
 

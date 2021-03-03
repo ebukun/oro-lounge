@@ -14,11 +14,11 @@ const Menu = () => {
 
             <div className="bg-menu-img bg-no-repeat bg-cover ">
                 <Navbar />
-                <div className="flex flex-col justify-center items-center py-10">
-                    <h3 className="text-center text-whitish font-bold font-bebasBold text-8xl leading-extra-big my-9">
+                <div className="header-wrapper py-10">
+                    <h3 className="header-headtext">
                         MENU
                     </h3>
-                    <p className="text-whitish font-barlow text-center text-xl leading-7 px-5 w-3/5 -mt-7">
+                    <p className="header-subtext">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                         consequat duis enim velit mollit. Exercitation veniam consequat met.
                     </p>
@@ -29,7 +29,7 @@ const Menu = () => {
                 </div>
             </div>
 
-            <div className="container mx-4 my-5">
+            <div className="wrapper">
                 <div className="3xl:container py-12 px-32 mb-12 menu-section text-whitish relative bg-brownish">
                     <div className="tab-menu mt-12">
                         <ul className="flex space-x-12 justify-center content-center">
