@@ -3,8 +3,10 @@ import Head from "next/head";
 import Footer from "@/components/footer/Footer";
 import Gallery from "@/components/gallery/Gallery";
 import Poster from "@/components/poster/Poster";
+import { useRouter } from "next/router";
 
 const Event = () => {
+    const router = useRouter();
     return (
         <div id="event-page">
             <Head>
@@ -24,13 +26,13 @@ const Event = () => {
                     </p>
 
                     <div className="cta space-x-7 mt-12">
-                        <button className="btn btn-primary btn-md uppercase">BOOK AN EVENT</button>
+                        <button className="btn btn-primary btn-md uppercase" onClick={() => router.push("event/bookings")}>BOOK AN EVENT</button>
                     </div>
                 </div>
             </div>
 
             <div className="wrapper">
-                <div className="text-center font-barlow text-lg flex flex-col justify-center items-center my-20 w-3/5 mx-auto">
+                <div className="text-center font-barlow text-lg flex flex-col justify-center items-center my-20 px-8 md:px-0 md:w-3/5 mx-auto">
                     <p className="leading-7 mb-12">
                         We’d love to host your next event. ilili is the perfect New York establishment to hold private
                         parties for a wide range of celebrations including birthdays, brunches, corporate and press
@@ -53,6 +55,7 @@ const Event = () => {
                     subText="For all inquiries, please fill out the form below and we’ll be in touch soon."
                     LinkTwo="BOOK AN EVENT"
                     bgImageClass="bg-booking-section"
+                    LinkTwoRoute="event/bookings"
                 />
                 <Footer />
             </div>

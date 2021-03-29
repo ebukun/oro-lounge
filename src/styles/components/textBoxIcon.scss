@@ -1,0 +1,72 @@
+.form-grop {
+    position: relative;
+    display: inline-flex;
+    height: fit-content;
+    width: 80%;
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+    & > span {
+        white-space: nowrap;
+        display: block;
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+
+    & input {
+        white-space: nowrap;
+        display: block;
+        // border: 1px solid $line;
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+        &:not(:first-child) {
+            margin-left: -1px;
+            border-left: 0;
+        }
+    }
+    input {
+        position: relative;
+        z-index: 1;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 30px !important;
+        padding: 10px;
+
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        &::placeholder {
+            font-family: "GT Walsheim-light";
+        }
+    }
+    & > span {
+        text-align: center;
+        padding: 11px 18px;
+        font-size: 14px;
+        // border: 1px solid $line;
+        & > img {
+            width: 20px;
+        }
+    }
+}

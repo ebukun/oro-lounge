@@ -3,8 +3,10 @@ import Head from "next/head";
 import Footer from "@/components/footer/Footer";
 import EventCard from "@/components/eventCard/EventCard";
 import Poster from "@/components/poster/Poster";
+import { useRouter } from "next/router";
 
 const Catering = () => {
+    const router = useRouter();
     return (
         <div id="catering-page">
             <Head>
@@ -15,22 +17,25 @@ const Catering = () => {
             <div className="bg-catering-img bg-no-repeat bg-cover ">
                 <Navbar />
                 <div className="header-wrapper py-10">
-                    <h3 className="header-headtext">
-                        CATERING
-                    </h3>
+                    <h3 className="header-headtext">CATERING</h3>
                     <p className="header-subtext">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                         consequat duis enim velit mollit. Exercitation veniam consequat met.
                     </p>
 
                     <div className="cta space-x-7 mt-12">
-                        <button className="btn btn-primary btn-md uppercase">GET CATERING</button>
+                        <button
+                            className="btn btn-primary btn-md uppercase"
+                            onClick={() => router.push("event/catering")}
+                        >
+                            GET CATERING
+                        </button>
                     </div>
                 </div>
             </div>
 
             <div className="wrapper">
-                <div className="text-center font-barlow text-lg flex flex-col justify-center items-center my-20 w-3/5 mx-auto">
+                <div className="text-center font-barlow text-lg flex flex-col justify-center items-center my-20 px-8 md:px-0 md:w-3/5 mx-auto">
                     <p className="leading-7 mb-12">
                         We’d love to host your next event. ilili is the perfect New York establishment to hold private
                         parties for a wide range of celebrations including birthdays, brunches, corporate and press
@@ -44,8 +49,8 @@ const Catering = () => {
                     </p>
                 </div>
 
-                <div className="container px-32 mx-auto my-16">
-                    <div className="grid grid-cols-6 gap-7 grid-rows-2 ">
+                <div className="container lg:px-32 mx-auto my-16">
+                    <div className="grid grid-cols-6 gap-4 lg:gap-7 grid-rows-2 ">
                         <div className="col-span-6 ">
                             <div className="bg-hook-three bg-no-repeat bg-cover h-96 bg-center"></div>
                         </div>
@@ -65,6 +70,7 @@ const Catering = () => {
                     duis enim velit mollit. Exercitation veniam consequat met."
                     LinkTwo="GET CATERING"
                     bgImageClass="bg-cta-section"
+                    LinkTwoRoute="event/catering"
                 />
 
                 <Footer />

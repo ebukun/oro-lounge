@@ -4,12 +4,62 @@ import MenuCard from "@/components/menuCard/MenuCard";
 import Poster from "@/components/poster/Poster";
 import EventCard from "@/components/eventCard/EventCard";
 import Testimonial from "@/components/testimonialSlide/Testimonial";
-import Footer from '@/components/footer/Footer';
+import Footer from "@/components/footer/Footer";
 import Gallery from "@/components/gallery/Gallery";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
+import axios from "axios";
+import TabMenu from "@/components/tabMenu/TabMenu";
+import { useState, useEffect, useCallback } from "react";
 
-export default function Home() {
-    const router = useRouter()
+export default function Home({ events, menus }) {
+    const router = useRouter();
+
+    console.log(events);
+
+    //State
+    const [listMenus, setListMenus] = useState(null);
+
+    useEffect(() => {
+        const menu = menus.find((data) => {
+            return data.id === 1;
+        });
+        setListMenus(menu);
+    }, []);
+
+    //Tab Handler
+    const selectMenu = useCallback((id) => {
+        const menu = menus.find((data) => {
+            return data.id === id;
+        });
+        setListMenus(menu);
+    }, []);
+
+    const tabs = [
+        {
+            name: "STARTERS",
+            id: 1
+        },
+        {
+            name: "MAIN",
+            id: 2
+        },
+        {
+            name: "DESSERT",
+            id: 3
+        },
+        {
+            name: "COCKTAILS",
+            id: 4
+        },
+        {
+            name: "WINE",
+            id: 5
+        },
+        {
+            name: "BEER",
+            id: 6
+        }
+    ];
 
     return (
         <div className="" id="home-page">
@@ -18,7 +68,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="bg-hero-pattern header bg-no-repeat bg-contain">
+            <div className="bg-hero-pattern header bg-center bg-no-repeat bg-contain">
                 <Navbar />
                 <div className="flex flex-col justify-center items-center content-center h-3/4">
                     <h3 className="header-text text-center text-whitish  ">
@@ -32,15 +82,19 @@ export default function Home() {
                     </p>
 
                     <div className="cta space-x-7 mt-8">
-                        <button className="btn btn-secondary btn-md">BOOK AN EVENT</button>
-                        <button className="btn btn-primary btn-md">ORDER ONLINE</button>
+                        <button className="btn btn-secondary btn-md" onClick={() => router.push("/event/bookings")}>
+                            BOOK AN EVENT
+                        </button>
+                        <button className="btn btn-primary btn-md" onClick={() => router.push("/order")}>
+                            ORDER ONLINE
+                        </button>
                     </div>
                 </div>
             </div>
             <div className="wrapper">
                 {/**SECTION 2 */}
-                <div className="2xl:container mx-auto px-32 about-section mb-24">
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:gap-x-64 ">
+                <div className="2xl:container mx-auto px-12 md:px-32  about-section mb-24">
+                    <div className="grid  md:grid-cols-1 lg:grid-cols-3 md:gap-y-10 gap-y-4 lg:gap-x-64 ">
                         <div className="col-span-2 left-section">
                             <h4 className="heading-text text-redish">
                                 Located in Park Slope, Pacific Tavern is a purveyor of fine American dining from the
@@ -57,7 +111,7 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="right-section">
-                            <div className=" grid gap-y-10 mt-3  ">
+                            <div className=" grid gap-y-10 lg:grid-cols-1 md:grid-cols-2 mt-3  ">
                                 <div className="">
                                     <h5 className="mb-3">Phone</h5>
                                     <p>(347) 555-1234</p>
@@ -79,46 +133,46 @@ export default function Home() {
                     </div>
                 </div>
                 {/**SECTION 3 */}
-                <div className="3xl:container py-12 px-32 mb-12 menu-section text-whitish relative">
+                <div className="3xl:container py-12 px-12 md:px-32 lg:mb-12 menu-section text-whitish relative">
                     <div className="first-image-overly">
-                        <img className="" src="/assets/images/spag.png" alt="" />
+                        <img className="" src="/assets/images/spag.png" className="hidden md:block" alt="" />
                     </div>
 
                     <div className="mx-auto py-20 z-50">
                         <h6 className="font-barlow tracking-wide text-center text-sm mb-2">ENJOY OUR TASTY MEALS</h6>
                         <h4 className="text-center heading-text">OUR MENU</h4>
 
-                        <div className="tab-menu mt-12">
-                            <ul className="flex space-x-8 justify-center content-center">
-                                <li className="btn btn-primary btn-md text-blackish cursor-pointer">STARTERS</li>
-                                <li className="btn btn-secondary btn-md cursor-pointer">MAIN</li>
-                                <li className="btn btn-secondary btn-md cursor-pointer">DESSERT</li>
-                                <li className="btn btn-secondary btn-md cursor-pointer">COCKTAILS</li>
-                                <li className="btn btn-secondary btn-md cursor-pointer">WINE</li>
-                                <li className="btn btn-secondary btn-md cursor-pointer">BEER</li>
-                            </ul>
-                        </div>
+                        <TabMenu menus={tabs} onSelect={selectMenu} />
 
                         <div className="menu-details mt-24">
                             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 ">
-                                <MenuCard />
-                                <MenuCard />
-                                <MenuCard />
-                                <MenuCard />
-                                <MenuCard />
-                                <MenuCard />
-                                <MenuCard />
-                                <MenuCard />
+                                {listMenus &&
+                                    listMenus?.menus.map((menu) => {
+                                        return (
+                                            <MenuCard
+                                                name={menu.name}
+                                                ingredients={menu.ingredients}
+                                                price={menu.price}
+                                            />
+                                        );
+                                    })}
                             </div>
                         </div>
 
                         <div className="cta space-x-7 mt-24 flex justify-center ">
-                            <button className="btn btn-secondary btn-md " onClick={()=> router.push('/menu')}>VIEW FULL MENU</button>
-                            <button className="btn btn-primary btn-md text-blackish">ORDER ONLINE</button>
+                            <button className="btn btn-secondary btn-md " onClick={() => router.push("/menu")}>
+                                VIEW FULL MENU
+                            </button>
+                            <button
+                                className="btn btn-primary btn-md text-blackish"
+                                onClick={() => router.push("/order")}
+                            >
+                                ORDER ONLINE
+                            </button>
                         </div>
                     </div>
                     <div className="second-image-overly">
-                        <img className="" src="/assets/images/juice.png" alt="" />
+                        <img className="" src="/assets/images/juice.png" className="hidden md:block" alt="" />
                     </div>
                 </div>
                 {/**SECTION 4 */}
@@ -133,10 +187,18 @@ export default function Home() {
                     LinkOneRoute="/catering"
                 />
                 {/**SECTION 5 */}
-                <div className="3xl:container mx-auto px-32 happening-section my-40">
+                <div className="xl:container mx-auto px-10 lg:px-20 happening-section my-28">
                     <h3 className="text-center heading-text text-blackish mb-8">HAPPENINGS</h3>
-                    <div className="grid grid-cols-3 gap-20">
-                        <EventCard
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10">
+                        {events.slice(0, 3).map((event) => (
+                            <EventCard
+                                month="First Tuesday of the month"
+                                eventName={event.name}
+                                time=" All Day"
+                                img="bg-hook-one"
+                            />
+                        ))}
+                        {/* <EventCard
                             month="First Tuesday of the month"
                             eventName="Free Drinks Wednesday"
                             time=" All Day"
@@ -153,10 +215,15 @@ export default function Home() {
                             eventName="Free Drinks Wednesday"
                             time=" All Day"
                             img="bg-hook-three"
-                        />
+                        /> */}
                     </div>
                     <div className="cta flex mt-9 justify-center ">
-                        <button className="btn btn-primary btn-md text-blackish" onClick={()=> router.push("/happening")}>VIEW MORE</button>
+                        <button
+                            className="btn btn-primary btn-md text-blackish"
+                            onClick={() => router.push("/happening")}
+                        >
+                            VIEW MORE
+                        </button>
                     </div>
                 </div>
                 {/**SECTION 6 */}
@@ -172,19 +239,19 @@ export default function Home() {
                 />
 
                 {/**SECTION 7 */}
-                <div className="3xl:container gallery-section my-40">
-                    <h3 className="text-center heading-text text-blackish mb-20">GALLERY</h3>
-                    <Gallery/>
-                    <div className="cta flex mt-20  justify-center ">
+                <div className="3xl:container gallery-section my-20">
+                    <h3 className="text-center heading-text text-blackish mb-10 lg:mb-20">GALLERY</h3>
+                    <Gallery />
+                    <div className="cta flex mt-4 lg:mt-20  justify-center ">
                         <button className="btn btn-primary btn-md text-blackish">VIEW MORE</button>
                     </div>
                 </div>
                 {/**SECTION 8 */}
                 <Testimonial />
                 {/**SECTION 9 */}
-                <div className="3xl:container contact-section mb-10">
-                    <div className="grid grid-cols-2">
-                        <div className="address text-center py-28">
+                <div className="3xl:container contact-section lg:mb-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2">
+                        <div className="address text-center px-6 md:px-0 py-28">
                             <p className=" text-sm font-barlow text-center leading-7  text-whitish">
                                 WHAT OUR CUSTOMERS SAY ABOUT US
                             </p>
@@ -205,12 +272,30 @@ export default function Home() {
                                 </ul>
                             </div>
                         </div>
-                        <div id="map" className="bg-map bg-no-repeat bg-cover"></div>
+                        <div id="map" className="bg-map bg-no-repeat p-32 bg-center bg-cover"></div>
                     </div>
                 </div>
                 {/**Footer */}
-                <Footer/>
+                <Footer />
             </div>
         </div>
     );
+}
+
+export async function getServerSideProps(context) {
+    try {
+        const event_response = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/events`);
+        const menu_response = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/categories`);
+
+        return {
+            props: {
+                events: event_response.data.data.events.data,
+                menus: menu_response.data.data.categories.data
+            }
+        };
+    } catch (error) {
+        return {
+            props: { events: null, menus: null }
+        };
+    }
 }

@@ -1,6 +1,10 @@
 #home-page {
     .header {
-        height: 100vh;
+        height: 700px;
+
+        @media screen and (max-width: 768px) {
+            height: 100%;
+        }
     }
 
     .header-text {
@@ -23,12 +27,20 @@
     .about-section {
         .left-section {
             width: 650px;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
             .heading-text {
                 font-style: normal;
                 font-weight: normal;
                 font-size: 42px;
                 line-height: 48px;
                 width: 615px;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
             }
 
             & > p {

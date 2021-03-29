@@ -1,0 +1,23 @@
+.order-page {
+    .order-tab-menu {
+        ul {
+            // margin: 0 350px;
+
+            li {
+                cursor: pointer;
+                &.active {
+                    background: #e5cb9f;
+                    padding: 12px;
+                    color: #231f20;
+                    @media screen and (max-width: 768px) {
+                        padding: 10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .order-section {
+    }
+}

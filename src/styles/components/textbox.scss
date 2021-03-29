@@ -1,0 +1,13 @@
+.input-box {
+    .input {
+        background: #f7f7f7;
+        border: 1px solid #bdbdbd;
+        font-family: "Barlow regular", sans-serif;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

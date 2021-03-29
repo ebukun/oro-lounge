@@ -1,0 +1,7 @@
+{
+    "menus": [
+        { "id": "p1", "name": "Coco Spice", "price": "24.00", "recipe": "Spice rum, Pineapple, Coconut, Magarita" },
+        { "id": "p2", "name": "Rice french", "price": "350.00", "recipe": "Spice rum, Pineapple, Coconut, Magarita" },
+        { "id": "p3", "name": "Maize millet", "price": "10.00", "recipe": "Spice rum, Pineapple, Coconut, Magarita" }
+    ]
+}

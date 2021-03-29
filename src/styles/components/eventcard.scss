@@ -1,6 +1,11 @@
 .event-card {
-    width: 632px;
+    // width: 632px;
     height: 400px;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
     .details {
         background: rgba(35, 31, 32, 0.75);
         backdrop-filter: blur(5px);
@@ -21,3 +26,6 @@
         }
     }
 }
+
+// px-10 md:px-10 lg:px-40 xl:px-0
+// grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-12 lg:gap-x-20 gap-y-4 md:gap-y-16
