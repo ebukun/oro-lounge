@@ -5,7 +5,7 @@ const TabMenu = ({ menus, onSelect }) => {
 
     const toggleTab = ({ id, name }) => {
         setActive(name);
-        onSelect && onSelect(id);
+        onSelect && onSelect(id, name);
     };
     return (
         <div className="tab-menu mt-12 mx-auto">
