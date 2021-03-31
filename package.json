@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3009",
+    "dev": "next dev -p 3007",
     "build": "next build",
     "start": "next start"
   },
@@ -22,6 +22,7 @@
     "postcss-import": "^14.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-use": "^17.2.1",
     "sass": "^1.32.7",
     "tailwind": "^4.0.0",
     "tailwindcss": "^2.0.3"

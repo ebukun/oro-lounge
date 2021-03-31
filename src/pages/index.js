@@ -14,8 +14,6 @@ import { useState, useEffect, useCallback } from "react";
 export default function Home({ events, menus }) {
     const router = useRouter();
 
-    console.log(events);
-
     //State
     const [listMenus, setListMenus] = useState(null);
 
@@ -68,12 +66,12 @@ export default function Home({ events, menus }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="bg-hero-pattern header bg-center bg-no-repeat bg-contain">
+            <div className="bg-hero-pattern header bg-no-repeat bg-cover">
                 <Navbar />
                 <div className="flex flex-col justify-center items-center content-center h-3/4">
                     <h3 className="header-text text-center text-whitish  ">
-                        <p className="inline-block ">BAR </p> <span className="inline-block mx-4">•</span>{" "}
-                        <p className="inline-block">RESTAURANT</p> <span className="inline-block mx-4">•</span>
+                        <p className="inline-block ">BAR </p> <span className="inline-block mx-1 md:mx-4">•</span>{" "}
+                        <p className="inline-block">RESTAURANT</p> <span className="inline-block mx-1 md:mx-4">•</span>{" "}
                         <p className="inline-block ">EVENTS</p>
                     </h3>
                     <p className="text-whitish sub-text text-center px-5">
@@ -93,17 +91,16 @@ export default function Home({ events, menus }) {
             </div>
             <div className="wrapper">
                 {/**SECTION 2 */}
-                <div className="2xl:container mx-auto px-12 md:px-32  about-section mb-24">
+                <div className="2xl:container mx-auto px-8 md:px-32 mt-7 about-section mb-24">
                     <div className="grid  md:grid-cols-1 lg:grid-cols-3 md:gap-y-10 gap-y-4 lg:gap-x-64 ">
                         <div className="col-span-2 left-section">
                             <h4 className="heading-text text-redish">
-                                Located in Park Slope, Pacific Tavern is a purveyor of fine American dining from the
-                                esteemed Chef Billy Lang.
+                                Located in Brookdale park, Oro lounge is a pureveyor of fine american and african
+                                dining.
                             </h4>
                             <p className="my-8 text-blackish">
-                                Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur
-                                duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat
-                                incididunt sint deserunt ut voluptate aute id deserunt nisi.
+                                We offer a variety of both american and african dishes to choose from, to its finest
+                                taste making our clients wanting more. Your best spot for fun, relaxation and good food.
                             </p>
                             <p className="text-blackish">
                                 Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor.
@@ -114,11 +111,11 @@ export default function Home({ events, menus }) {
                             <div className=" grid gap-y-10 lg:grid-cols-1 md:grid-cols-2 mt-3  ">
                                 <div className="">
                                     <h5 className="mb-3">Phone</h5>
-                                    <p>(347) 555-1234</p>
+                                    <p>(176) 34322384</p>
                                 </div>
                                 <div className="">
                                     <h5 className="mb-3">LOCATION</h5>
-                                    <p className="">74 5th Avenue at St. Marks Place Brooklyn, NY 11217</p>
+                                    <p className="">2875 Brookdale Drive Brooklyn Park, MN 55444</p>
                                 </div>
                                 <div className="">
                                     <h5 className="mb-3">Hours</h5>
@@ -133,7 +130,7 @@ export default function Home({ events, menus }) {
                     </div>
                 </div>
                 {/**SECTION 3 */}
-                <div className="3xl:container py-12 px-12 md:px-32 lg:mb-12 menu-section text-whitish relative">
+                <div className="3xl:container py-12 px-10 md:px-32 lg:mb-12 menu-section text-whitish relative">
                     <div className="first-image-overly">
                         <img className="" src="/assets/images/spag.png" className="hidden md:block" alt="" />
                     </div>
@@ -179,12 +176,12 @@ export default function Home({ events, menus }) {
                 <Poster
                     smallText="FOR YOUR SPECIAL DAY"
                     headingText="EXCEPTIONAL CATERING SERVICES"
-                    subText="        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-                    duis enim velit mollit. Exercitation veniam consequat met."
+                    subText="We offer a very unique catering service that caters to our clients needs be it indoor or outdoor service."
                     LinkOne="VIEW MORE"
                     LinkTwo="GET CATERING"
                     bgImageClass="bg-cta-section"
                     LinkOneRoute="/catering"
+                    LinkTwoRoute="event/catering"
                 />
                 {/**SECTION 5 */}
                 <div className="xl:container mx-auto px-10 lg:px-20 happening-section my-28">
@@ -198,24 +195,6 @@ export default function Home({ events, menus }) {
                                 img="bg-hook-one"
                             />
                         ))}
-                        {/* <EventCard
-                            month="First Tuesday of the month"
-                            eventName="Free Drinks Wednesday"
-                            time=" All Day"
-                            img="bg-hook-one"
-                        />
-                        <EventCard
-                            month="19th March 2021"
-                            eventName="Karaoke Night"
-                            time=" All Day"
-                            img="bg-hook-two"
-                        />
-                        <EventCard
-                            month="Tuesday of the month"
-                            eventName="Free Drinks Wednesday"
-                            time=" All Day"
-                            img="bg-hook-three"
-                        /> */}
                     </div>
                     <div className="cta flex mt-9 justify-center ">
                         <button
@@ -230,12 +209,13 @@ export default function Home({ events, menus }) {
                 <Poster
                     smallText="MAKE USE OF OUR SPACE"
                     headingText="BOOK AN EVENT"
-                    subText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-                    duis enim velit mollit. Exercitation veniam consequat met."
+                    subText="Book your event with us, at our state of the art event center, we are ready to host your weddings, seminars, parties and lots more in our spacious capacity event hall.
+                    Security is guaranteed."
                     LinkOne="VIEW MORE"
                     LinkTwo="MAKE A RESERVATION"
                     bgImageClass="bg-booking-section"
                     LinkOneRoute="/event"
+                    LinkTwoRoute="/event/bookings"
                 />
 
                 {/**SECTION 7 */}

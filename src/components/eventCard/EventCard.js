@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 const EventCard = ({ month, eventName, time, img }) => {
     return (
         <div className={`${img} bg-no-repeat relative bg-contain event-card`}>

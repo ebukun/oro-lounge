@@ -1,6 +1,74 @@
 .navbar {
     background: rgba(35, 31, 32, 0.6);
     backdrop-filter: blur(14px);
+
+    .nav-toggle {
+        border: 0;
+        cursor: pointer;
+        // display: none;
+        font-size: 22px;
+        position: relative;
+        padding: 10px;
+        outline: none;
+        height: 50px;
+        width: 50px;
+        .bar {
+            background-color: #e5cb9f;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            height: 3px;
+            width: 30px;
+            transition: transform 0.2s ease;
+
+            &:first-of-type {
+                top: 40%;
+            }
+
+            &:last-of-type {
+                top: 60%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav {
+            background-color: #231f20;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 80px;
+            left: 10%;
+            transform: translateX(120%);
+            width: 80%;
+            transition: transform 0.3s ease-in;
+            z-index: 100;
+        }
+
+        nav.show {
+            transform: translateX(0);
+        }
+
+        .nav-toggle {
+            display: block;
+        }
+
+        .nav-toggle.show-x {
+            .bar {
+                &:first-of-type {
+                    transform: translate(-50%, 50%) rotate(225deg);
+                }
+
+                &:last-of-type {
+                    top: 50%;
+                    transform: translate(-50%, -150%) rotate(-225deg);
+                }
+            }
+        }
+    }
 }
 
 .nav-color {
