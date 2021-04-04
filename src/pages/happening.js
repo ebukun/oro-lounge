@@ -10,7 +10,7 @@ const Happening = () => {
                 <title>Happening | Oro lounge</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="bg-happening-img bg-no-repeat bg-cover ">
+            <div className="bg-happening-img bg-center bg-no-repeat bg-cover ">
                 <Navbar />
                 <div className="header-wrapper py-20">
                     <h3 className="header-headtext">HAPPENINGS</h3>

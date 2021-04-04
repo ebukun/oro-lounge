@@ -5,7 +5,6 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <title>Oro lounge</title>
                     <meta
                         name="description"
                         content="We offer a variety of both american and african dishes to choose from, to its finest taste making our clients wanting more. 

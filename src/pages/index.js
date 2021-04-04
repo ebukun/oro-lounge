@@ -66,7 +66,7 @@ export default function Home({ events, menus }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="bg-hero-pattern header bg-no-repeat bg-cover">
+            <div className="bg-hero-pattern header bg-no-repeat bg-cover z-0">
                 <Navbar />
                 <div className="flex flex-col justify-center items-center content-center h-3/4">
                     <h3 className="header-text text-center text-whitish  ">

@@ -5,7 +5,7 @@
     .nav-toggle {
         border: 0;
         cursor: pointer;
-        // display: none;
+        display: none;
         font-size: 22px;
         position: relative;
         padding: 10px;
@@ -32,24 +32,37 @@
     }
 
     @media screen and (max-width: 768px) {
+        .navbar {
+            position: relative;
+        }
         .nav {
             background-color: #231f20;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
             flex-direction: column;
             text-align: center;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
+            // justify-content: center;
+            // align-items: center;
+            position: absolute;
             top: 80px;
-            left: 10%;
-            transform: translateX(120%);
+            left: -100%;
+            // transform: translateX(120%);
             width: 80%;
-            transition: transform 0.3s ease-in;
+            transition: all 0.7s ease-in;
             z-index: 100;
+            // display: none;
+
+            ul {
+                li {
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+            }
         }
 
         nav.show {
-            transform: translateX(0);
+            left:10%;
+            // transform: translateX(0);
+            // display: block;
         }
 
         .nav-toggle {
@@ -59,12 +72,12 @@
         .nav-toggle.show-x {
             .bar {
                 &:first-of-type {
-                    transform: translate(-50%, 50%) rotate(225deg);
+                    transform: translate(-50%, 50%) rotate(45deg);
                 }
 
                 &:last-of-type {
                     top: 50%;
-                    transform: translate(-50%, -150%) rotate(-225deg);
+                    transform: translate(-50%, -150%) rotate(-45deg);
                 }
             }
         }

@@ -14,7 +14,7 @@ const Catering = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="bg-catering-img bg-no-repeat bg-cover ">
+            <div className="bg-catering-img bg-center bg-no-repeat bg-cover ">
                 <Navbar />
                 <div className="header-wrapper py-10">
                     <h3 className="header-headtext">CATERING</h3>

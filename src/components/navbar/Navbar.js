@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { useWindowSize } from "react-use";
 
 const Navbar = ({ bgBlack }) => {
@@ -22,6 +23,17 @@ const Navbar = ({ bgBlack }) => {
         { name: "gallery", route: "/" }
     ];
 
+    useEffect(() => {
+        let nav = document.querySelector(".nav");
+        let burger = document.getElementById("nav-toggle");
+        document.addEventListener("scroll", (e) => {
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+                burger?.classList.toggle("show-x");
+            }
+        });
+    });
+
     return (
         <header
             className={`3xl:container px-8 md:px-20 py-3 navbar flex flex-row justify-between items-center ${
@@ -31,7 +43,7 @@ const Navbar = ({ bgBlack }) => {
             <nav className="nav p-4 order-last lg:order-first">
                 <ul className="flex flex-col items-center md:flex-row navLinks mb-3 md:space-x-7 text-whitish ">
                     {links.map((link) => (
-                        <li className="inline-block mb-1 uppercase" key={Math.random() * 1000}>
+                        <li className="inline-block nav-link mb-1 uppercase" key={Math.random() * 1000}>
                             <Link href={link.route}>
                                 <a>{link.name}</a>
                             </Link>
@@ -57,12 +69,11 @@ const Navbar = ({ bgBlack }) => {
                 </Link>
             </div>
             {/* <p className="text-whitish">Hi there Coming Home</p> */}
-            {width < 768 && (
-                <div id="nav-toggle" role="button" className="nav-toggle bg-brownish" onClick={hamburgerHandler}>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                </div>
-            )}
+
+            <div id="nav-toggle" role="button" className="nav-toggle bg-brownish" onClick={hamburgerHandler}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
 
             {width > 999 && (
                 <div className="cta flex flew-row space-x-1 md:space-x-5">
