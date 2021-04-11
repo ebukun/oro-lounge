@@ -23,14 +23,14 @@
         }
 
         @media screen and (max-width: 569px) {
-            font-size: 40px;
+            font-size: 35px;
             line-height: 50px;
         }
     }
 
     .sub-text {
         width: 888px;
-        font-family: "Barlow-thin";
+        // font-family: "Barlow-thin";
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
@@ -39,7 +39,7 @@
         @media screen and (max-width: 569px) {
             width: 100%;
             font-size: 16px;
-            line-height: 19px;
+            line-height: 20px;
         }
 
         @media screen and (max-width: 976px) {

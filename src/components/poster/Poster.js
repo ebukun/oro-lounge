@@ -20,7 +20,7 @@ const Poster = ({
                 <h6 className="font-barlow text-center leading-7  text-whitish">{smallText}</h6>
                 <h3 className="text-center heading-text text-whitish">{headingText}</h3>
 
-                <p className="font-barlow text-center sub-text text-whitish mt-4 mb-4 md:mx-auto">{subText}</p>
+                <p className="font-barlow text-center poster-sub-text text-whitish mt-4 mb-4 md:mx-auto">{subText}</p>
 
                 <div className="cta space-x-4 md:space-x-10 flex mt-8 justify-center ">
                     {LinkOne !== "" && (

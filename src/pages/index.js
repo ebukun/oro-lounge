@@ -10,8 +10,10 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import TabMenu from "@/components/tabMenu/TabMenu";
 import { useState, useEffect, useCallback } from "react";
+import { format } from "date-fns";
 
 export default function Home({ events, menus }) {
+    console.log(events);
     const router = useRouter();
 
     //State
@@ -74,7 +76,7 @@ export default function Home({ events, menus }) {
                         <p className="inline-block">RESTAURANT</p> <span className="inline-block mx-1 md:mx-4">•</span>{" "}
                         <p className="inline-block ">EVENTS</p>
                     </h3>
-                    <p className="text-whitish sub-text text-center px-5">
+                    <p className="text-whitish sub-text font-barlow text-center px-5">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                         consequat duis enim velit mollit. Exercitation veniam consequat met.
                     </p>
@@ -130,7 +132,7 @@ export default function Home({ events, menus }) {
                     </div>
                 </div>
                 {/**SECTION 3 */}
-                <div className="3xl:container py-12 px-10 md:px-32 lg:mb-12 menu-section text-whitish relative">
+                <div className="3xl:container py-12 px-8 md:px-32 lg:mb-12 menu-section text-whitish relative">
                     <div className="first-image-overly">
                         <img className="" src="/assets/images/spag.png" className="hidden md:block" alt="" />
                     </div>
@@ -186,12 +188,12 @@ export default function Home({ events, menus }) {
                 {/**SECTION 5 */}
                 <div className="xl:container mx-auto px-10 lg:px-20 happening-section my-28">
                     <h3 className="text-center heading-text text-blackish mb-8">HAPPENINGS</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-10 gap-y-10 p-5 sm:p-0">
                         {events.slice(0, 3).map((event) => (
                             <EventCard
-                                month="First Tuesday of the month"
+                                month={format(new Date(event.start_date), "do LLLL yyy ")}
                                 eventName={event.name}
-                                time=" All Day"
+                                time={format(new Date(event.start_date), "hh:mmaaa")}
                                 img="bg-hook-one"
                             />
                         ))}

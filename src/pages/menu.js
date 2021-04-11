@@ -103,22 +103,37 @@ const Menu = ({ menus }) => {
 
             <div className="wrapper">
                 <div className="3xl:container py-12 px-12 md:px-32 lg:mb-12 menu-section text-whitish relative bg-brownish">
-                    <TabMenu menus={tabs} onSelect={selectMenu} />
+                    {menus && (
+                        <>
+                            <TabMenu menus={tabs} onSelect={selectMenu} />
+                            <div className="my-24">
+                                <div className="flex flex-col justify-center items-center my-14">
+                                    {renderMenuImage()}
+                                    <h3 className="mt-4 text-5xl md:text-nav font-bebasBold md:leading-extra-bigos uppercase">
+                                        {menuName}
+                                    </h3>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 ">
+                                    {listMenus &&
+                                        listMenus?.menus.map((menu) => {
+                                            return (
+                                                <MenuCard
+                                                    name={menu.name}
+                                                    ingredients={menu.ingredients}
+                                                    price={menu.price}
+                                                />
+                                            );
+                                        })}
+                                </div>
+                            </div>
+                        </>
+                    )}
 
-                    <div className="my-24">
-                        <div className="flex flex-col justify-center items-center my-14">
-                            {renderMenuImage()}
-                            <h3 className="mt-4 text-5xl md:text-nav font-bebasBold md:leading-extra-bigos uppercase">{menuName}</h3>
+                    {!menus && (
+                        <div className="flex flex-col justify-center items-center my-36 ">
+                            <h4 className="text-4xl text-center">We are updating our menu. Please stay tuned...</h4>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 ">
-                            {listMenus &&
-                                listMenus?.menus.map((menu) => {
-                                    return (
-                                        <MenuCard name={menu.name} ingredients={menu.ingredients} price={menu.price} />
-                                    );
-                                })}
-                        </div>
-                    </div>
+                    )}
                 </div>
                 <Testimonial />
 

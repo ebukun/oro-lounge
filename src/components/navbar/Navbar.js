@@ -36,14 +36,14 @@ const Navbar = ({ bgBlack }) => {
 
     return (
         <header
-            className={`3xl:container px-8 md:px-20 py-3 navbar flex flex-row justify-between items-center ${
+            className={`3xl:container px-8 md:px-20 pt-3 navbar flex flex-row justify-between items-center ${
                 bgBlack && "nav-color"
             }`}
         >
             <nav className="nav p-4 order-last lg:order-first">
                 <ul className="flex flex-col items-center md:flex-row navLinks mb-3 md:space-x-7 text-whitish ">
                     {links.map((link) => (
-                        <li className="inline-block nav-link mb-1 uppercase" key={Math.random() * 1000}>
+                        <li className="inline-block nav-link mb-1 uppercase text-lg" key={Math.random() * 1000}>
                             <Link href={link.route}>
                                 <a>{link.name}</a>
                             </Link>
