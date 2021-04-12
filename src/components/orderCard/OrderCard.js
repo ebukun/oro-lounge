@@ -8,7 +8,7 @@ const OrderCard = ({ name, recipe, price, image }) => {
                 </div>
                 <p className="text-base">{price}</p>
             </div>
-            <div className="order-img bg-no-repeat bg-cover" style={{ backgroundImage: `url(${image})` }}></div>
+            {/* <div className="order-img bg-no-repeat bg-cover" style={{ backgroundImage: `url(${image})` }}></div> */}
         </div>
     );
 };

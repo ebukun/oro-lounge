@@ -13,7 +13,6 @@ import { useState, useEffect, useCallback } from "react";
 import { format } from "date-fns";
 
 export default function Home({ events, menus }) {
-    console.log(events);
     const router = useRouter();
 
     //State
@@ -34,32 +33,12 @@ export default function Home({ events, menus }) {
         setListMenus(menu);
     }, []);
 
-    const tabs = [
-        {
-            name: "STARTERS",
-            id: 1
-        },
-        {
-            name: "MAIN",
-            id: 2
-        },
-        {
-            name: "DESSERT",
-            id: 3
-        },
-        {
-            name: "COCKTAILS",
-            id: 4
-        },
-        {
-            name: "WINE",
-            id: 5
-        },
-        {
-            name: "BEER",
-            id: 6
-        }
-    ];
+    const tabs = menus.map((menu) => {
+        return {
+            name: menu.name,
+            id: menu.id
+        };
+    });
 
     return (
         <div className="" id="home-page">
@@ -186,7 +165,7 @@ export default function Home({ events, menus }) {
                     LinkTwoRoute="event/catering"
                 />
                 {/**SECTION 5 */}
-                <div className="xl:container mx-auto px-10 lg:px-20 happening-section my-28">
+                <div className="xl:container mx-auto px-4 lg:px-20 happening-section my-28">
                     <h3 className="text-center heading-text text-blackish mb-8">HAPPENINGS</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-10 gap-y-10 p-5 sm:p-0">
                         {events.slice(0, 3).map((event) => (

@@ -36,7 +36,7 @@ const Navbar = ({ bgBlack }) => {
 
     return (
         <header
-            className={`3xl:container px-8 md:px-20 pt-3 navbar flex flex-row justify-between items-center ${
+            className={`3xl:container px-8 md:px-20 pt-3 py-3 navbar flex flex-row justify-between items-center ${
                 bgBlack && "nav-color"
             }`}
         >

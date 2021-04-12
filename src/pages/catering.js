@@ -1,7 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import Head from "next/head";
 import Footer from "@/components/footer/Footer";
-import EventCard from "@/components/eventCard/EventCard";
 import Poster from "@/components/poster/Poster";
 import { useRouter } from "next/router";
 

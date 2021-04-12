@@ -29,49 +29,29 @@ const Menu = ({ menus }) => {
             return data.id === id;
         });
         setListMenus(menu);
-        setMenuName(name);
+        setMenuName(id);
     }, []);
 
-    const tabs = [
-        {
-            name: "STARTERS",
-            id: 1
-        },
-        {
-            name: "MAIN",
-            id: 2
-        },
-        {
-            name: "DESSERT",
-            id: 3
-        },
-        {
-            name: "COCKTAILS",
-            id: 4
-        },
-        {
-            name: "WINE",
-            id: 5
-        },
-        {
-            name: "BEER",
-            id: 6
-        }
-    ];
+    const tabs = menus.map((menu) => {
+        return {
+            name: menu.name,
+            id: menu.id
+        };
+    });
 
     const renderMenuImage = useCallback(() => {
         switch (menuName) {
-            case "STARTERS":
+            case 1:
                 return <img src="/assets/icons/salad.svg" alt="icon" />;
-            case "COCKTAILS":
+            case 2:
                 return <img src="/assets/icons/cocktail.svg" alt="icon" />;
-            case "MAIN":
+            case 3:
                 return <img src="/assets/icons/steak.svg" alt="icon" />;
-            case "DESSERT":
+            case 4:
                 return <img src="/assets/icons/desert.svg" alt="icon" />;
-            case "WINE":
+            case 5:
                 return <img src="/assets/icons/wine.svg" alt="icon" />;
-            case "BEER":
+            case 6:
                 return <img src="/assets/icons/beer-mug.svg" alt="icon" />;
             default:
                 return <img src="/assets/icons/salad.svg" alt="icon" />;
@@ -110,7 +90,7 @@ const Menu = ({ menus }) => {
                                 <div className="flex flex-col justify-center items-center my-14">
                                     {renderMenuImage()}
                                     <h3 className="mt-4 text-5xl md:text-nav font-bebasBold md:leading-extra-bigos uppercase">
-                                        {menuName}
+                                        {listMenus?.name}
                                     </h3>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 ">
