@@ -125,7 +125,7 @@ export default function Home({ events, menus }) {
                         <div className="menu-details mt-24">
                             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 ">
                                 {listMenus &&
-                                    listMenus?.menus.map((menu) => {
+                                    listMenus?.menus.slice(0, 6).map((menu) => {
                                         return (
                                             <MenuCard
                                                 name={menu.name}

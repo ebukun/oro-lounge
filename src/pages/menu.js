@@ -13,14 +13,12 @@ const Menu = ({ menus }) => {
 
     //State
     const [listMenus, setListMenus] = useState(null);
-    const [menuName, setMenuName] = useState("");
 
     useEffect(() => {
         const menu = menus?.find((data) => {
             return data.id === 1;
         });
         setListMenus(menu);
-        setMenuName("STARTERS");
     }, []);
 
     //Tab Handler
@@ -29,7 +27,6 @@ const Menu = ({ menus }) => {
             return data.id === id;
         });
         setListMenus(menu);
-        setMenuName(id);
     }, []);
 
     const tabs = menus.map((menu) => {
@@ -39,24 +36,6 @@ const Menu = ({ menus }) => {
         };
     });
 
-    const renderMenuImage = useCallback(() => {
-        switch (menuName) {
-            case 1:
-                return <img src="/assets/icons/salad.svg" alt="icon" />;
-            case 2:
-                return <img src="/assets/icons/cocktail.svg" alt="icon" />;
-            case 3:
-                return <img src="/assets/icons/steak.svg" alt="icon" />;
-            case 4:
-                return <img src="/assets/icons/desert.svg" alt="icon" />;
-            case 5:
-                return <img src="/assets/icons/wine.svg" alt="icon" />;
-            case 6:
-                return <img src="/assets/icons/beer-mug.svg" alt="icon" />;
-            default:
-                return <img src="/assets/icons/salad.svg" alt="icon" />;
-        }
-    }, [menuName]);
     return (
         <div className="" id="menu-page">
             <Head>
@@ -88,19 +67,20 @@ const Menu = ({ menus }) => {
                             <TabMenu menus={tabs} onSelect={selectMenu} />
                             <div className="my-24">
                                 <div className="flex flex-col justify-center items-center my-14">
-                                    {renderMenuImage()}
+                                    <img src={listMenus?.icon} alt="menu_icon" />
                                     <h3 className="mt-4 text-5xl md:text-nav font-bebasBold md:leading-extra-bigos uppercase">
                                         {listMenus?.name}
                                     </h3>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 ">
                                     {listMenus &&
-                                        listMenus?.menus.map((menu) => {
+                                        listMenus?.menus.map((menu, index) => {
                                             return (
                                                 <MenuCard
                                                     name={menu.name}
                                                     ingredients={menu.ingredients}
                                                     price={menu.price}
+                                                    key={index}
                                                 />
                                             );
                                         })}

@@ -8,14 +8,14 @@ class MyDocument extends Document {
                     <meta
                         name="description"
                         content="We offer a variety of both american and african dishes to choose from, to its finest taste making our clients wanting more. 
-Your best spot for fun, relaxation and good food."
+                        Your best spot for fun, relaxation and good food."
                     />
 
                     <meta itemprop="name" content="Oro lounge" />
                     <meta
                         itemprop="description"
                         content="We offer a variety of both american and african dishes to choose from, to its finest taste making our clients wanting more. 
-Your best spot for fun, relaxation and good food."
+                         Your best spot for fun, relaxation and good food."
                     />
                     <meta itemprop="image" content="https://i.ibb.co/PmRX8gS/Logo.png" />
 
@@ -25,7 +25,7 @@ Your best spot for fun, relaxation and good food."
                     <meta
                         property="og:description"
                         content="We offer a variety of both american and african dishes to choose from, to its finest taste making our clients wanting more. 
-Your best spot for fun, relaxation and good food."
+                        Your best spot for fun, relaxation and good food."
                     />
                     <meta property="og:image" content="https://i.ibb.co/PmRX8gS/Logo.png" />
 
@@ -34,7 +34,7 @@ Your best spot for fun, relaxation and good food."
                     <meta
                         name="twitter:description"
                         content="We offer a variety of both american and african dishes to choose from, to its finest taste making our clients wanting more. 
-Your best spot for fun, relaxation and good food."
+                        Your best spot for fun, relaxation and good food."
                     />
                     <meta name="twitter:image" content="https://i.ibb.co/PmRX8gS/Logo.png" />
                 </Head>

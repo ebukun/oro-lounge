@@ -15,7 +15,7 @@ const TabMenu = ({ menus, onSelect }) => {
                         key={menu.id}
                         onClick={() => toggleTab(menu)}
                         className={`btn btn-md text-blackish cursor-pointer ${
-                            active === menu.name ? "btn-primary" : "btn-secondary"
+                            active === menu.name ? "btn-tab-primary" : "btn-tab-secondary"
                         }`}
                     >
                         {menu.name}

@@ -41,7 +41,7 @@ const Navbar = ({ bgBlack }) => {
             }`}
         >
             <nav className="nav p-4 order-last lg:order-first">
-                <ul className="flex flex-col items-center md:flex-row navLinks mb-3 md:space-x-7 text-whitish ">
+                <ul className="flex flex-col items-center md:flex-row navLinks mb-3 md:mb-0 md:space-x-7 text-whitish ">
                     {links.map((link) => (
                         <li className="inline-block nav-link mb-1 uppercase text-lg" key={Math.random() * 1000}>
                             <Link href={link.route}>
@@ -68,7 +68,6 @@ const Navbar = ({ bgBlack }) => {
                     </a>
                 </Link>
             </div>
-            {/* <p className="text-whitish">Hi there Coming Home</p> */}
 
             <div id="nav-toggle" role="button" className="nav-toggle bg-brownish" onClick={hamburgerHandler}>
                 <div className="bar"></div>

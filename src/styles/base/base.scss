@@ -12,8 +12,20 @@ body {
     line-height: 24px;
     color: #231f20;
     background-color: #fff;
+    // animation: fade 0.5s;
+    animation: fade 0.75s ease-in-out;
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 html {
     scroll-behavior: smooth;
 }
@@ -44,12 +56,48 @@ li {
 .btn-primary {
     background-color: #e5cb9f;
     border: 1px solid #e5cb9f;
+    transition-property: background-color, border, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+
+    &:hover {
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        background: rgba(35, 31, 32, 0.6);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-tab-primary {
+    background-color: #e5cb9f;
+    border: 1px solid #e5cb9f;
+}
+
+.btn-tab-secondary {
+    background: rgba(35, 31, 32, 0.6);
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
 .btn-secondary {
     background: rgba(35, 31, 32, 0.6);
     border: 1px solid #ffffff;
     color: #ffffff;
+    transition-property: background-color, border, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+
+    &:hover {
+        background-color: #e5cb9f;
+        border: 1px solid #e5cb9f;
+        color: #231f20;
+    }
+    &:focus {
+        outline: none;
+    }
 }
 
 .btn-md {
