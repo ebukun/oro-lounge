@@ -23,13 +23,13 @@ const Menu = ({ menus }) => {
 
     //Tab Handler
     const selectMenu = useCallback((id, name) => {
-        const menu = menus.find((data) => {
+        const menu = menus?.find((data) => {
             return data.id === id;
         });
         setListMenus(menu);
     }, []);
 
-    const tabs = menus.map((menu) => {
+    const tabs = menus?.map((menu) => {
         return {
             name: menu.name,
             id: menu.id

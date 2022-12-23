@@ -19,7 +19,7 @@ export default function Home({ events, menus }) {
     const [listMenus, setListMenus] = useState(null);
 
     useEffect(() => {
-        const menu = menus.find((data) => {
+        const menu = menus?.find((data) => {
             return data.id === 1;
         });
         setListMenus(menu);
@@ -27,13 +27,13 @@ export default function Home({ events, menus }) {
 
     //Tab Handler
     const selectMenu = useCallback((id) => {
-        const menu = menus.find((data) => {
+        const menu = menus?.find((data) => {
             return data.id === id;
         });
         setListMenus(menu);
     }, []);
 
-    const tabs = menus.map((menu) => {
+    const tabs = menus?.map((menu) => {
         return {
             name: menu.name,
             id: menu.id
@@ -113,7 +113,7 @@ export default function Home({ events, menus }) {
                 {/**SECTION 3 */}
                 <div className="3xl:container py-12 px-8 md:px-32 lg:mb-12 menu-section text-whitish relative">
                     <div className="first-image-overly">
-                        <img className="" src="/assets/images/spag.png" className="hidden md:block" alt="" />
+                        <img className="" src="/assets/images/spag.png hidden md:block" alt="" />
                     </div>
 
                     <div className="mx-auto py-20 z-50">
@@ -150,7 +150,7 @@ export default function Home({ events, menus }) {
                         </div>
                     </div>
                     <div className="second-image-overly">
-                        <img className="" src="/assets/images/juice.png" className="hidden md:block" alt="" />
+                        <img className="" src="/assets/images/juice.png hidden md:block" alt="" />
                     </div>
                 </div>
                 {/**SECTION 4 */}
@@ -168,7 +168,7 @@ export default function Home({ events, menus }) {
                 <div className="xl:container mx-auto px-4 lg:px-20 happening-section my-28">
                     <h3 className="text-center heading-text text-blackish mb-8">HAPPENINGS</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-10 gap-y-10 p-5 sm:p-0">
-                        {events.slice(0, 3).map((event) => (
+                        {events?.slice(0, 3).map((event) => (
                             <EventCard
                                 month={format(new Date(event.start_date), "do LLLL yyy ")}
                                 eventName={event.name}

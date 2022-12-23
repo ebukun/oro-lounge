@@ -22,7 +22,7 @@ const Order = ({ menus }) => {
 
     useEffect(() => {
         if (!componentJustMounted.current) {
-            const menu = menus.find((data) => {
+            const menu = menus?.find((data) => {
                 return data.name === active;
             });
             console.log(menu);
@@ -33,7 +33,7 @@ const Order = ({ menus }) => {
 
     //Tab Handler
     const selectMenu = useCallback((id, name) => {
-        const menu = menus.find((data) => {
+        const menu = menus?.find((data) => {
             return data.id === id;
         });
         setListMenus(menu);
@@ -43,7 +43,7 @@ const Order = ({ menus }) => {
         setActive(name);
     };
 
-    const tabs = menus.map((menu) => {
+    const tabs = menus?.map((menu) => {
         return {
             name: menu.name,
             id: menu.id
@@ -68,7 +68,7 @@ const Order = ({ menus }) => {
                 <div className="order-tab-menu bg-brownish md:mb-3">
                     <ul className="flex overflow-x-scroll lg:overflow-x-hidden space-x-4 md:space-x-4 lg:space-x-9 md:justify-center lg:justify-between lg:mx-72 items-center font-barlow h-12">
                         {/* <li className="text-whitish active">Popular Items</li> */}
-                        {tabs.map((menu) => (
+                        {tabs?.map((menu) => (
                             <li
                                 key={menu.id}
                                 onClick={() => toggleTab(menu.name)}
